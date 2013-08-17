@@ -24,6 +24,7 @@ public class KnokKnokClient {
     public static void main(String[] args) throws UnknownHostException, SocketException {
         KnokKnokClient aClient = new KnokKnokClient();
         aClient.sendMessage("abc");
+        //abc
     }
 
     private void sendMessage(String mes) {
