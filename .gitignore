@@ -5,3 +5,4 @@
 *.war
 *.ear
 /KnokKnokClient/nbproject/private/
+/KnokKnokClient/build/
