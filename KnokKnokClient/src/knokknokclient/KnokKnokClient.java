@@ -9,21 +9,27 @@ import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.util.Date;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class KnokKnokClient {
+
     private SocketAddress serverSocketAddress;
     private DatagramSocket socket;
 
     public KnokKnokClient() throws UnknownHostException, SocketException {
-        socket = new DatagramSocket(8886);
+        Random random = new Random(new Date().getTime());
+        socket = new DatagramSocket(random.nextInt(60000) + 10000);
         this.serverSocketAddress = new InetSocketAddress(InetAddress.getLocalHost(), 8888);
     }
-    
+
     public static void main(String[] args) throws UnknownHostException, SocketException {
         KnokKnokClient aClient = new KnokKnokClient();
-        aClient.sendMessage("abc");
+        for (int i = 0; i < 10; i++) {
+            aClient.sendMessage("abc");
+        }
         //abc
     }
 
