@@ -14,4 +14,7 @@ public class VaTest {
     //đổi màu rồi đấy,
     //giờ save phát ( tức là lại có thay đổi )
     //comit ở bên kia, hoặc là bằng netbeans luôn
+    //a ko biết sao nữa, nhưng mà chỗ a push phát ở netbeans là xong luôn
+    // a sẽ tìm hiểu sau. giờ chắc e sync bằng cái bên kai vậy
+    // dc ko==
 }
