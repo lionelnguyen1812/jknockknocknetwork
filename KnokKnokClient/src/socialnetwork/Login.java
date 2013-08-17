@@ -60,7 +60,7 @@ public class Login extends javax.swing.JPanel {
         lblName = new javax.swing.JLabel();
         lblEmail = new javax.swing.JLabel();
         lblReEmail = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lblBackgroundCarry = new javax.swing.JLabel();
 
         Login.setLayout(null);
 
@@ -221,9 +221,10 @@ public class Login extends javax.swing.JPanel {
         Login.add(jPanel2);
         jPanel2.setBounds(480, 110, 320, 380);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/skype-login.png"))); // NOI18N
-        Login.add(jLabel4);
-        jLabel4.setBounds(0, 0, 830, 520);
+        lblBackgroundCarry.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/skype-login.png"))); // NOI18N
+        lblBackgroundCarry.setText("avsdfasdf");
+        Login.add(lblBackgroundCarry);
+        lblBackgroundCarry.setBounds(0, 0, 830, 520);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -316,8 +317,8 @@ public class Login extends javax.swing.JPanel {
     private javax.swing.JComboBox cbbSex;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblBackgroundCarry;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblPassword;
