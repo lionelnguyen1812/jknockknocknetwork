@@ -31,9 +31,16 @@ public class Homepage extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jComboBox1 = new javax.swing.JComboBox();
+        jSeparator1 = new javax.swing.JSeparator();
+        lblUserName = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        btnHome = new javax.swing.JButton();
+        btnAddFriend = new javax.swing.JButton();
+        jPanel10 = new javax.swing.JPanel();
+        jSeparator2 = new javax.swing.JSeparator();
         jPanel4 = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        tbtRecent = new javax.swing.JTabbedPane();
         jPanel8 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -50,32 +57,72 @@ public class Homepage extends javax.swing.JPanel {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        lblUserName.setText("Name");
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(29, 29, 29)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(234, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(lblUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
+            .addComponent(jSeparator1)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblUserName))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel3.add(jPanel6, java.awt.BorderLayout.PAGE_START);
 
-        jPanel5.setPreferredSize(new java.awt.Dimension(100, 50));
+        jPanel5.setPreferredSize(new java.awt.Dimension(100, 60));
+        jPanel5.setLayout(new java.awt.BorderLayout());
+
+        jPanel9.setPreferredSize(new java.awt.Dimension(300, 50));
+
+        btnHome.setText("Home");
+        jPanel9.add(btnHome);
+
+        btnAddFriend.setText("Add Friend");
+        jPanel9.add(btnAddFriend);
+
+        jPanel5.add(jPanel9, java.awt.BorderLayout.PAGE_START);
+
+        jPanel10.setPreferredSize(new java.awt.Dimension(300, 10));
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel5.add(jPanel10, java.awt.BorderLayout.CENTER);
+
         jPanel3.add(jPanel5, java.awt.BorderLayout.CENTER);
 
         jPanel1.add(jPanel3, java.awt.BorderLayout.PAGE_START);
 
         jPanel4.setPreferredSize(new java.awt.Dimension(300, 396));
         jPanel4.setLayout(new java.awt.BorderLayout());
+
+        tbtRecent.setAutoscrolls(true);
+        tbtRecent.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -85,10 +132,10 @@ public class Homepage extends javax.swing.JPanel {
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 387, Short.MAX_VALUE)
+            .addGap(0, 382, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Contact", jPanel8);
+        tbtRecent.addTab("Contact", jPanel8);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -98,12 +145,12 @@ public class Homepage extends javax.swing.JPanel {
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 387, Short.MAX_VALUE)
+            .addGap(0, 382, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Recent", jPanel7);
+        tbtRecent.addTab("Recent", jPanel7);
 
-        jPanel4.add(jTabbedPane1, java.awt.BorderLayout.PAGE_START);
+        jPanel4.add(tbtRecent, java.awt.BorderLayout.PAGE_START);
 
         jPanel1.add(jPanel4, java.awt.BorderLayout.CENTER);
         jPanel4.getAccessibleContext().setAccessibleDescription("");
@@ -116,8 +163,11 @@ public class Homepage extends javax.swing.JPanel {
         add(jSplitPane1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAddFriend;
+    private javax.swing.JButton btnHome;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -125,7 +175,11 @@ public class Homepage extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel lblUserName;
+    private javax.swing.JTabbedPane tbtRecent;
     // End of variables declaration//GEN-END:variables
 }
