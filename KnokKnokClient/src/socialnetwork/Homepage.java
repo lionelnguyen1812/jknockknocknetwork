@@ -119,7 +119,7 @@ public class Homepage extends javax.swing.JPanel {
         jPanel1.add(jPanel3, java.awt.BorderLayout.PAGE_START);
 
         jPanel4.setPreferredSize(new java.awt.Dimension(300, 396));
-        jPanel4.setLayout(new java.awt.BorderLayout());
+        jPanel4.setLayout(new java.awt.GridLayout());
 
         tbtRecent.setAutoscrolls(true);
         tbtRecent.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -132,7 +132,7 @@ public class Homepage extends javax.swing.JPanel {
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 382, Short.MAX_VALUE)
+            .addGap(0, 360, Short.MAX_VALUE)
         );
 
         tbtRecent.addTab("Contact", jPanel8);
@@ -145,12 +145,12 @@ public class Homepage extends javax.swing.JPanel {
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 382, Short.MAX_VALUE)
+            .addGap(0, 360, Short.MAX_VALUE)
         );
 
         tbtRecent.addTab("Recent", jPanel7);
 
-        jPanel4.add(tbtRecent, java.awt.BorderLayout.PAGE_START);
+        jPanel4.add(tbtRecent);
 
         jPanel1.add(jPanel4, java.awt.BorderLayout.CENTER);
         jPanel4.getAccessibleContext().setAccessibleDescription("");
