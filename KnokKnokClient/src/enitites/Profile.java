@@ -16,7 +16,7 @@ public class Profile extends javax.swing.JPanel {
     public Profile() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -38,6 +38,7 @@ public class Profile extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -74,6 +75,7 @@ public class Profile extends javax.swing.JPanel {
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 255, 51), null));
         jPanel2.setLayout(new java.awt.BorderLayout());
 
+        jPanel5.setPreferredSize(new java.awt.Dimension(341, 80));
         jPanel5.setLayout(new java.awt.BorderLayout());
 
         jLabel3.setText("Account :");
@@ -82,7 +84,7 @@ public class Profile extends javax.swing.JPanel {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addContainerGap())
@@ -90,7 +92,7 @@ public class Profile extends javax.swing.JPanel {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
+                .addContainerGap(26, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(40, 40, 40))
         );
@@ -115,7 +117,7 @@ public class Profile extends javax.swing.JPanel {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
@@ -141,19 +143,9 @@ public class Profile extends javax.swing.JPanel {
 
         jPanel2.add(jPanel6, java.awt.BorderLayout.PAGE_END);
 
-        jPanel7.setBackground(new java.awt.Color(153, 255, 0));
         jPanel7.setPreferredSize(new java.awt.Dimension(333, 200));
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 333, Short.MAX_VALUE)
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
+        jPanel7.setLayout(new java.awt.BorderLayout());
+        jPanel7.add(jSeparator1, java.awt.BorderLayout.PAGE_START);
 
         jPanel2.add(jPanel7, java.awt.BorderLayout.CENTER);
 
@@ -171,6 +163,7 @@ public class Profile extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel pnlAvatar;
     // End of variables declaration//GEN-END:variables
 }

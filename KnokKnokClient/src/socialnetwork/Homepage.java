@@ -4,6 +4,8 @@
  */
 package socialnetwork;
 
+import enitites.Profile;
+
 /**
  *
  * @author YenNT4
@@ -42,8 +44,10 @@ public class Homepage extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         tbtRecent = new javax.swing.JTabbedPane();
         jPanel8 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        lstFriends = new javax.swing.JList();
         jPanel7 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        pnlContent = new javax.swing.JPanel();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -58,6 +62,17 @@ public class Homepage extends javax.swing.JPanel {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         lblUserName.setText("Name");
+        lblUserName.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblUserNameMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                lblUserNameMousePressed(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblUserNameMouseEntered(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -78,7 +93,7 @@ public class Homepage extends javax.swing.JPanel {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblUserName))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -119,20 +134,27 @@ public class Homepage extends javax.swing.JPanel {
         jPanel1.add(jPanel3, java.awt.BorderLayout.PAGE_START);
 
         jPanel4.setPreferredSize(new java.awt.Dimension(300, 396));
-        jPanel4.setLayout(new java.awt.GridLayout());
+        jPanel4.setLayout(new java.awt.GridLayout(1, 0));
 
         tbtRecent.setAutoscrolls(true);
         tbtRecent.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        lstFriends.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(lstFriends);
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 295, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 295, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 360, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
         );
 
         tbtRecent.addTab("Contact", jPanel8);
@@ -145,7 +167,7 @@ public class Homepage extends javax.swing.JPanel {
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 360, Short.MAX_VALUE)
+            .addGap(0, 358, Short.MAX_VALUE)
         );
 
         tbtRecent.addTab("Recent", jPanel7);
@@ -157,18 +179,30 @@ public class Homepage extends javax.swing.JPanel {
 
         jSplitPane1.setLeftComponent(jPanel1);
 
-        jPanel2.setLayout(new java.awt.BorderLayout());
-        jSplitPane1.setRightComponent(jPanel2);
+        pnlContent.setLayout(new java.awt.BorderLayout());
+        jSplitPane1.setRightComponent(pnlContent);
 
         add(jSplitPane1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lblUserNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserNameMouseClicked
+       
+    }//GEN-LAST:event_lblUserNameMouseClicked
+
+    private void lblUserNameMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserNameMouseEntered
+        
+    }//GEN-LAST:event_lblUserNameMouseEntered
+
+    private void lblUserNameMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserNameMousePressed
+        //showProfile();
+    }//GEN-LAST:event_lblUserNameMousePressed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddFriend;
     private javax.swing.JButton btnHome;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -176,10 +210,17 @@ public class Homepage extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel lblUserName;
+    private javax.swing.JList lstFriends;
+    private javax.swing.JPanel pnlContent;
     private javax.swing.JTabbedPane tbtRecent;
     // End of variables declaration//GEN-END:variables
+    
+    void showProfile(){
+        Profile pf = new Profile();
+    }
 }
